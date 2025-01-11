@@ -1,0 +1,13 @@
+window.addEventListener( 'load', ev => {
+    addProjectToMenu( 'Recycle', 'tree' )
+    addProjectToMenu( 'Recursive Geometry', 'geo' )
+    addProjectToMenu( 'Magic Drawing', 'draw' )
+    addProjectToMenu( 'Metatron\'s Cube', 'metatron', false )
+    addProjectToMenu( 'Moving Fractals', 'fract', false )
+    addProjectToMenu( 'Platonic solids', 'poli', false )
+    addProjectToMenu( 'The Magic School', 'school', false )
+    addProjectToMenu( 'Arcade', 'arcade', false )
+    addProjectToMenu( 'Synesthesia', 'sine', false )
+    addProjectToMenu( 'Random Artworks', 'random' )
+    addProjectToMenu( 'Magic Ball', 'pitia' )
+} )

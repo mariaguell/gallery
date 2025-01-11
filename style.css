@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+
+/* Estètica general */
+
+body {
+    background-color: #1F1F1F;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+}
+body {
+    color: #F8F8F8;
+    font-family: 'Poiret One', 'Raleway', 'Segoe UI Light', 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size: 22pt;
+}
+
+ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+ul > li {
+    margin-top: 20px;
+}
+ul > li > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.centered {
+    margin: 0;
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: translate( -50%, -50% );
+}
+
+
+
+/* Estètica del marc */
+
+#marc {
+    height: 90vh;
+}
+#marc > path, #marc > rect, #marc > use {
+    fill: none;
+    stroke: #F8F8F8;
+    stroke-width: .05px;
+}
+#marc > use.mirrorXY {
+    transform-origin: 50% 50%;
+    transform: rotate(180deg);
+}
+#marc > use.mirrorX {
+    transform-origin: 50% 50%;
+    transform: scale(-1,1);
+}
+#marc > use.mirrorY {
+    transform-origin: 50% 50%;
+    transform: scale(1,-1);
+}
+
+@media (max-width: 700px) {
+    #marc { width: 90%;}
+    #container { width: 90%; }
+    ul>li>a { font-size: 18pt; }
+}
+
+
+
+/* Animacions */
+
+#container {
+    animation-name: animText;
+    animation-duration: 5s;
+}
+
+ul > li > a {
+    position: relative;
+}
+ul > li > a:hover::after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #F8F8F8;
+    position: absolute;
+    bottom: 0; left: 0;
+    animation-name: animTextHover;
+    animation-duration: 2s;
+}
+
+@keyframes animText {
+    from { letter-spacing: 0.4em; }
+    to   { letter-spacing: 0;     }
+}
+
+@keyframes animTextHover {
+    from { width:  10%; left: 45%; }
+    to   { width: 100%; left: 0;   }
+}
